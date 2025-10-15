@@ -1,0 +1,192 @@
+/* 页面横幅 */
+.page-banner {
+  width: 100%;
+  height: 200px;
+  background: url('../images/rice-farmers-1200x600-1.JPEG') center/cover no-repeat;
+  position: relative;
+  margin-top: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.page-banner-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 900px) {
+  .page-banner {
+    height: 300px;
+  }
+  .page-banner-title {
+    font-size: 2rem;
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-banner {
+    height: 200px;
+  }
+  .page-banner-title {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+}
+
+/* 内容区域 */
+.content-box {
+  max-width: 1200px;
+  margin: 60px auto 80px;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.content-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2d2d2d;
+  margin: 0 0 30px 0;
+  text-align: start;
+}
+
+.content-text {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin: 0 0 20px 0;
+  text-align: justify;
+}
+
+.content-list {
+  margin: 0 0 24px 24px;
+  padding: 0 0 0 18px;
+  font-size: 1.08rem;
+  color: #4a4a4a;
+  line-height: 1;
+}
+.content-list li {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+.content-list a {
+  color: #00aff2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.content-list a:hover {
+  color: #0077a8;
+  text-decoration: underline;
+}
+
+.content-dei {
+  font-size: 1.05rem;
+  color: #2d2d2d;
+  margin: 18px 0 0 0;
+  font-style: italic;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .content-box {
+    margin: 40px auto 60px;
+    padding: 0 30px;
+  }
+  .content-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  .content-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-box {
+    margin: 30px auto 40px;
+    padding: 0 20px;
+  }
+  .content-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .content-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* 关于卡片 */
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px 20px;  /* 第一个值是行间距(上下)，第二个值是列间距(左右) */
+  margin: 40px 0 60px 0;
+}
+
+.about-card {
+  padding: 28px 24px 0px 24px;  /* 上 右 下 左，第三个值控制底部距离 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+/* .about-card p{
+  padding: 60px 0px 0px 0px;
+} */
+.about-card-img {
+  width: auto;  /* 改为auto以显示原始宽度 */
+  max-width: 100%;  /* 保留最大宽度限制，防止图片超出容器 */
+  height: auto;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+.about-card-desc {
+  font-size: 0.98rem;
+  color: #3a3a3a;
+  text-align: start;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.about-card a {
+  color: #00aff2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+@media (min-width: 900px) {
+  .about-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 60px;
+  }
+  .about-card {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-cards {
+    gap: 24px 0;
+  }
+  .about-card {
+    padding: 16px 8px 12px 8px;
+  }
+  .about-card-img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-card-desc {
+    font-size: 0.98rem;
+  }
+}

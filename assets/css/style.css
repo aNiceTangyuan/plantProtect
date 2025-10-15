@@ -1,0 +1,422 @@
+.navbar {
+  width: 100%;
+  height: 160px;
+  background-color: rgb(236, 246, 231);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+  margin-top: 10px;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.nav-text {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.arrow-icon {
+  width: 12px;
+  height: 12px;
+  color: #666;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.main-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sub-title {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 简易箭头样式 */
+.arrow-icon::after {
+  content: "▼";
+  font-size: 10px;
+  color: #666;
+  line-height: 1;
+}
+
+/* 会员标题 */
+.members-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #2d2d2d;
+  margin: 60px 0 40px 0;
+  padding: 0 20px;
+}
+
+/* 会员图标网格 */
+.members-grid {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 150px);
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.member-icon {
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(207, 207, 207);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.member-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+@media (max-width: 1200px) {
+  .members-grid {
+    gap: 15px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .members-grid {
+    gap: 10px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .members-grid {
+    gap: 5px;
+    padding: 0 10px;
+  }
+}
+
+/* 轮播背景图区域 */
+.carousel-bg {
+  width: 100%;
+  height: 550px;
+  background: url('../images/lettuce-1200x600-1.JPEG') center/cover no-repeat;
+  position: relative;
+  margin-top: 160px;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+
+/* 海浪线过渡效果 */
+.carousel-bg::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,20 Q75,90 150,40 T300,30 Q375,80 450,20 T600,35 Q675,85 750,25 T900,30 Q975,75 1050,25 T1200,35 L1200,120 L0,120 Z' fill='%23ffffff' opacity='0.3'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,40 Q100,100 200,50 T400,60 Q500,105 600,50 T800,55 Q900,100 1000,55 T1200,50 L1200,120 L0,120 Z' fill='%23ffffff' opacity='0.5'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 Q150,110 300,70 T600,75 Q750,105 900,75 T1200,80 L1200,120 L0,120 Z' fill='%23ffffff' opacity='0.8'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  gap: 24px;
+  pointer-events: none;
+}
+
+.card {
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+  border-radius: 18px;
+  padding: 16px 48px 12px 38px;
+  margin-right: 60px;
+  pointer-events: auto;
+  backdrop-filter: blur(2px);
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-1 {
+  background: #e7d6b67d;
+  width: 1160px;
+  max-width: 98vw;
+  
+  align-items: center;
+}
+.card-1 h1 {
+  font-size: 2.1rem;
+  margin: 0 0 8px 0;
+  color: #2d2d2d;
+}
+.card-1 h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #4a4a4a;
+}
+
+.card-2 {
+  background: #e7d6b67d;
+  width: 1100px;
+  max-width: 90vw;
+  margin-top: -18px;
+  
+  align-items: center;
+}
+.card-2 h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #2d2d2d;
+}
+
+.card-3 {
+  background: rgb(82,131,52);
+  color: #fff;
+  width: 740px;
+  max-width: 70vw;
+  margin-top: -18px;
+  position: relative;
+  align-items: center;
+}
+.card-3 .latest-title {
+  font-weight: bold;
+  font-size: 1.08rem;
+  margin: 0 0 10px 0;
+  padding-left: 0;
+  display: block;
+  align-self: flex-start;
+}
+.card-3 ul {
+  margin: 0;
+  padding: 0;
+  list-style: disc inside;
+  align-self: flex-start;
+}
+.card-3 li {
+  font-size: 0.9rem;
+  margin-bottom: 7px;
+  line-height: 1.1;
+  position: relative;
+  padding-left: 0;
+}
+
+@media (max-width: 1200px) {
+  .carousel-bg { height: 320px; }
+  .card { margin-right: 20px; padding: 10px 18px 8px 12px; min-height: 36px; }
+  .card-1 { width: 80vw; }
+  .card-2 { width: 62vw; }
+  .card-3 { width: 44vw; }
+}
+
+@media (max-width: 900px) {
+  .carousel-bg { height: 220px; }
+  .card-group { bottom: 18px; gap: 14px; }
+  .card { margin-right: 6px; padding: 7px 8px 6px 6px; border-radius: 12px; min-height: 28px; }
+  .card-1 { width: 98vw; }
+  .card-2 { width: 80vw; }
+  .card-3 { width: 62vw; }
+  .card-1 h1 { font-size: 1.2rem; }
+  .card-1 h2 { font-size: 0.95rem; }
+  .card-2 h3 { font-size: 0.95rem; }
+  .card-3 li { font-size: 0.85rem; }
+}
+
+@media (max-width: 600px) {
+  .carousel-bg { height: 140px; }
+  .card-group { bottom: 6px; gap: 8px; }
+  .card { margin-right: 2vw; padding: 4px 2vw 3px 2vw; border-radius: 8px; min-height: 18px; }
+  .card-1 { width: 99vw; }
+  .card-2 { width: 80vw; }
+  .card-3 { width: 62vw; }
+  .card-1 h1 { font-size: 1rem; }
+  .card-1 h2 { font-size: 0.8rem; }
+  .card-2 h3 { font-size: 0.8rem; }
+  .card-3 li { font-size: 0.7rem; }
+}
+
+/* 语言选择栏 */
+.lang-bar {
+  width: 100%;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 40px 40px 40px;
+  box-sizing: border-box;
+  gap: 18px;
+}
+.lang-bar-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+.lang-bar-line {
+  flex: 1;
+  height: 1px;
+  background: #444;
+  min-width: 40px;
+  max-width: 400px;
+}
+.lang-bar-label {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.lang-bar-select {
+  font-size: 1rem;
+  padding: 4px 18px 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background: #fff;
+  color: #222;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.lang-bar-select:focus {
+  border: 1.5px solid #4a90e2;
+}
+
+@media (max-width: 600px) {
+  .lang-bar {
+    padding: 18px 10px 20px 10px;
+    gap: 12px;
+  }
+  .lang-bar-row {
+    gap: 10px;
+  }
+  .lang-bar-label {
+    font-size: 0.95rem;
+  }
+  .lang-bar-line {
+    min-width: 10px;
+  }
+}
+
+/* 底部版权 */
+.footer {
+  width: 100%;
+  background: rgb(127, 159, 124);
+  padding: 30px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  color: #fff;
+  font-size: 0.95rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 20px 15px;
+  }
+  .footer-text {
+    font-size: 0.85rem;
+  }
+}
