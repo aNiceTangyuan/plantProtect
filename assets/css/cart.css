@@ -1,0 +1,106 @@
+/* Cart 页面样式 */
+
+.links-banner {
+  width: 100%;
+  height: 200px;
+  background: #008E0D;
+  position: relative;
+  margin-top: 160px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.cart-banner-icon-symbol {
+  font-size: 72px;
+  margin-left: 48px;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  transform: scaleX(-1);
+}
+
+.links-banner-title {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.links-container {
+  width: 100%;
+  background-color: rgb(236, 246, 231);
+  min-height: auto;
+  box-sizing: border-box;
+}
+
+.links-area {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.links-article {
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+  color: #333;
+  position: relative;
+}
+
+.links-article::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 2px;
+  background: rgb(30, 133, 190);
+  margin-top: 25px;
+}
+
+.cart-empty-message {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-empty-icon {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.cart-empty-text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.cart-return-btn {
+  margin-top: 20px;
+  padding: 8px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 175, 242);
+  background: transparent;
+  border: 1px solid rgb(0, 175, 242);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+

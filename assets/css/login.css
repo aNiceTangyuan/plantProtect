@@ -1,0 +1,187 @@
+.login-lost-password {
+  display: flex;
+  text-align: right;
+  margin-top: 18px;
+}
+.login-lost-link {
+  color: #00aff4;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: text-decoration 0.2s;
+}
+/* Login 页面样式 */
+
+.links-banner {
+  width: 100%;
+  height: 200px;
+  background: rgb(0, 142, 13);
+  position: relative;
+  margin-top: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.login-banner-icon {
+  position: absolute;
+  left: 48px;
+  font-size: 72px;
+  z-index: 2;
+  line-height: 1;
+}
+
+.links-banner-title {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.links-container {
+  width: 100%;
+  background-color: rgb(236, 246, 231);
+  box-sizing: border-box;
+}
+
+.links-area {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.links-article {
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+  color: #333;
+}
+
+.links-article h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.login-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.login-form-group {
+  margin-bottom: 20px;
+}
+
+.login-label {
+  display: block;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  margin-top: 20px;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: rgb(0, 142, 13);
+}
+
+.login-password-wrapper {
+  position: relative;
+  margin-top: 20px;
+}
+
+.login-password-wrapper .login-input {
+  margin-top: 0;
+  padding-right: 45px;
+}
+
+.login-toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.login-toggle-password:hover {
+  opacity: 1;
+}
+
+.login-captcha-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  width: 200px;
+}
+
+.login-captcha-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.login-captcha-text {
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+}
+
+.login-captcha-svg {
+  flex-shrink: 0;
+}
+
+.login-remember-wrapper{
+  margin-top: 90px;
+}
+
+.login-submit-btn {
+  width: 90px;
+  margin: 32px auto 0 auto;
+  padding: 12px 0;
+  font-size: 18px;
+  color: #00aff4;
+  background: #fff;
+  border: 2px solid #00aff4;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+

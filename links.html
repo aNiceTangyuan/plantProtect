@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Links - IAPPS</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/events.css">
+  <link rel="stylesheet" href="assets/css/links.css">
+</head>
+<body>
+  <!-- 导航栏占位符 -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- 背景图片区域，使用 links-banner -->
+  <div class="links-banner">
+    <h1 class="links-banner-title">Links to Professional Societies and Other Organisations</h1>
+  </div>
+
+  <div class="links-container">
+    <div class="links-area">
+      <!-- 页面内容可在此添加 -->
+       <article class="links-article">
+        <h5>The societies and other organisations listed on this page include those primarily focused on plant protection topics. Other societies, such as entomological societies, not primarily focused on plant protection issues, are also  included since they often address significant topics of relevance to plant protection.</h5>
+        <p>By selecting a discipline shown below you will see the list of societies included in our database. Click on a society listed in blue to visit its website.</p>
+        <p>If you find a broken link or would like to nominate a relevant society not currently included in this database, please contact support@plantprotection.org.</p>
+          <div class="links-main-box">
+        <div class="links-side-list">
+          <div class="links-side-item selected">Acarology</div>
+          <div class="links-side-item">Arachnology</div>
+          <div class="links-side-item">Entomology</div>
+          <div class="links-side-item">Nematology</div>
+          <div class="links-side-item">Plant Pathology</div>
+          <div class="links-side-item">Plant Protection</div>
+          <div class="links-side-item">Weed Science</div>
+          <div class="links-side-item">Other Organisations</div>
+        </div>
+        <div class="links-content-box">
+          <!-- 这里显示选中类别的内容，默认可放一段说明 -->
+          <div class="links-content-inner">
+            <ul class="links-list">
+              <li><a href="#">Acarological Society of Japan</a></li>
+              <li><a href="#">Systematic and Applied Acarology Society</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       </article>
+       
+    </div>
+  </div>
+
+
+
+  <!-- 语言选择栏占位符 -->
+  <div id="lang-bar-placeholder"></div>
+
+  <!-- 页脚占位符 -->
+  <div id="footer-placeholder"></div>
+
+  <!-- 加载组件的脚本 -->
+  <script src="assets/js/components-loader.js"></script>
+  <script>
+// 响应点击切换 selected 并切换右侧内容
+const sideList = document.querySelector('.links-side-list');
+const contentInner = document.querySelector('.links-content-inner');
+const contentMap = [
+  `<ul class="links-list">
+    <li><a href="#">Acarological Society of Japan</a></li>
+    <li><a href="#">Systematic and Applied Acarology Society</a></li>
+  </ul>`,
+  `<ul class="links-list">
+    <li><a href="#">International Society of Arachnology</a></li>
+  </ul>`,
+  `<ul class="links-list">
+    <li><a href="#">African Association of Insect Scientists (AAIS)</a></li>
+    <li><a href="#">Asociación Española de Entomología</a></li>
+    <li><a href="#">Australian Entomological Society</a></li>
+    <li><a href="#">Brazilian Society of Entomology</a></li>
+    <li><a href="#">British Entomological and Natural History Society</a></li>
+    <li><a href="#">Chilean Society of Entomology</a></li>
+    <li><a href="#">Croatian Entomological Society</a></li>
+    <li><a href="#">Czech Entomological Society</a></li>
+    <li><a href="#">Danish Entomological Society</a></li>
+    <li><a href="#">Egyptian Entomological Society</a></li>
+    <li><a href="#">Entomological Society of America</a></li>
+    <li><a href="#">Entomological Society of Austria</a></li>
+
+  </ul>`,
+  `<ul class="links-list">
+    <li><a href="#">Nematology Society Example</a></li>
+  </ul>`,
+  `<ul class="links-list">
+    <li><a href="#">Plant Pathology Society Example</a></li>
+  </ul>`,
+  `<ul class="links-list">
+    <li><a href="#">Plant Protection Society Example</a></li>
+  </ul>`,
+  `<ul class="links-list">
+    <li><a href="#">Weed Science Society Example</a></li>
+  </ul>`,
+  `<ul class="links-list">
+    <li><a href="#">Other Organisations Example</a></li>
+  </ul>`
+];
+if (sideList && contentInner) {
+  sideList.addEventListener('click', function(e) {
+    if (e.target.classList.contains('links-side-item')) {
+      // 移除所有selected
+      sideList.querySelectorAll('.links-side-item').forEach(item => item.classList.remove('selected'));
+      // 当前点击项添加selected
+      e.target.classList.add('selected');
+      // 切换右侧内容
+      const idx = Array.from(sideList.children).indexOf(e.target);
+      contentInner.innerHTML = contentMap[idx] || '';
+    }
+  });
+}
+  </script>
+</body>
+</html>
