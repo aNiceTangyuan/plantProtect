@@ -1,0 +1,121 @@
+.recent-postings-list {
+  margin: 18px 0 0 0;
+  padding-left: 18px;
+}
+.recent-post-link {
+  color: #00aff4;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+.recent-postings-list li {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+.center-box {
+  margin-bottom: 32px;
+  margin-top: 20px;
+}
+.center-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 18px 0;
+  line-height: 1.3;
+}
+.center-tags {
+  margin: 0;
+  font-size: 15px;
+}
+.center-tag-link {
+  color: #00aff4;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+/* Resources 页面样式 - 复用基础模板风格 */
+
+.links-banner {
+  width: 100%;
+  height: 200px;
+  background: url('../images/mainimg.jpg') center/cover no-repeat;
+  position: relative;
+  margin-top: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.links-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.links-banner-title {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.links-container {
+  width: 100%;
+  background-color: rgb(236, 246, 231);
+  box-sizing: border-box;
+}
+
+.links-area {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.links-article {
+  background: #fff;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  line-height: 1.8;
+  color: #333;
+}
+
+.links-article h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* 三列布局 */
+.resources-columns {
+  display: flex;
+  gap: 24px;
+}
+.resources-left,
+.resources-center,
+.resources-right {
+  flex: 1;
+}
+
+/* 左列段落微调 */
+/* 左列段落微调 */
+.resources-left p {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+/* 蓝色无下划线链接 */
+.blue-link {
+  color: #00aff4;
+  text-decoration: none;
+}
+

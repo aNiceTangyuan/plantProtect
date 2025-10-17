@@ -180,7 +180,7 @@
   font-size: 18px;
   color: #00aff4;
   background: #fff;
-  border: 2px solid #00aff4;
+  border: 1px solid #00aff4;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
