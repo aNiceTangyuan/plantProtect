@@ -1,4 +1,9 @@
 <nav class="navbar">
+  <!-- Translate按钮 -->
+  <div class="translate-btn">
+    Translate »
+  </div>
+  
   <div class="navbar-content">
     <!-- Logo和标题区域 -->
     <div class="logo-section">
@@ -7,54 +12,93 @@
         <h1 class="main-title">IAPPS</h1>
         <p class="sub-title">International Association for the Plant Protection Sciences</p>
       </div>
-    </div>
-    
+    </div>   
     <!-- 导航菜单 -->
     <div class="nav-menu">
       <a class="nav-item" href="index.html">
-        <span class="nav-icon">🏠</span>
-        <span class="nav-text">Home</span>
-        <span class="arrow-icon"></span>
+        <span class="nav-icon dashicons dashicons-admin-home" aria-hidden="true"></span>
       </a>
-      <a class="nav-item" href="about.html">
-        <span class="nav-icon">ℹ️</span>
-        <span class="nav-text">About</span>
-        <span class="arrow-icon"></span>
-      </a>
-      <a class="nav-item" href="protection.html">
-        <span class="nav-icon">📄</span>
-        <span class="nav-text">Plant Protect</span>
-        <span class="arrow-icon"></span>
-      </a>
-      <a class="nav-item" href="events.html">
-        <span class="nav-icon">📅</span>
-        <span class="nav-text">Events</span>
-        <span class="arrow-icon"></span>
-      </a>
-      <a class="nav-item" href="resources.html">
-        <span class="nav-icon">📂</span>
-        <span class="nav-text">Resources</span>
-        <span class="arrow-icon"></span>
-      </a>
+      <div class="nav-item-wrapper">
+        <a class="nav-item" href="about.html">
+          <span class="nav-icon dashicons dashicons-info" aria-hidden="true"></span>
+          <span class="nav-text">About</span>
+          <span class="arrow-icon dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>
+        </a>
+        <!-- 下拉菜单 -->
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="#">Aims & Activities</a></li>
+            <li><a href="#">Brief History of IAPPS</a></li>
+            <li><a href="#">The IAPPS Board</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-item-wrapper">
+        <a class="nav-item" href="protection.html">
+          <span class="nav-icon obfx-menu-icon fa fa-leaf" aria-hidden="true"></span>
+          <span class="nav-text">Plant Protect</span>
+          <span class="arrow-icon dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>
+        </a>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="#">Introduction</a></li>
+            <li><a href="#">An Integrated Approach to Plant Protection</a></li>
+            <li><a href="#">Main Disciplines</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-item-wrapper">
+        <a class="nav-item" href="events.html">
+          <span class="nav-icon dashicons dashicons-format-chat" aria-hidden="true"></span>
+          <span class="nav-text">Events</span>
+          <span class="arrow-icon dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>
+        </a>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="#">The International Plant Protection Congress (IPPC)</a></li>
+            <li><a href="#">IAPPS Regional Seminars, Workshops, and Congresses</a></li>
+            <li><a href="#">Other Plant Protection Meetings</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-item-wrapper">
+        <a class="nav-item" href="resources.html">
+          <span class="nav-icon obfx-menu-icon fa fa-bank" aria-hidden="true"></span>
+          <span class="nav-text">Resources</span>
+          <span class="arrow-icon dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>
+        </a>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="#">Online News-GPPN</a></li>
+            <li><a href="#">IAPPS Newsletter & Archive</a></li>
+            <li><a href="#">Crop Protection Journal</a></li>
+            <li><a href="#">Education and Training</a></li>
+          </ul>
+        </div>
+      </div>
       <a class="nav-item" href="links.html">
-        <span class="nav-icon">🔗</span>
+        <span class="nav-icon dashicons dashicons-admin-links" aria-hidden="true"></span>
         <span class="nav-text">Links</span>
-        <span class="arrow-icon"></span>
       </a>
-      <a class="nav-item" href="membership.html">
-        <span class="nav-icon">👤</span>
-        <span class="nav-text">Membership</span>
-        <span class="arrow-icon"></span>
-      </a>
+      <div class="nav-item-wrapper">
+        <a class="nav-item" href="membership.html">
+          <span class="nav-icon obfx-menu-icon fa fa-group" aria-hidden="true"></span>
+          <span class="nav-text">Membership</span>
+          <span class="arrow-icon dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span>
+        </a>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="#">Join IAPPS</a></li>
+            <li><a href="#">Available Subscriptions</a></li>
+          </ul>
+        </div>
+      </div>
       <a class="nav-item" href="cart.html">
-        <span class="nav-icon">🛒</span>
-        <span class="nav-text">Carts</span>
-        <span class="arrow-icon"></span>
+        <span class="nav-icon dashicons dashicons-cart" aria-hidden="true"></span>
       </a>
-      <a class="nav-item" href="login.html">
-        <span class="nav-icon">🔐</span>
+      <a class="nav-item nav-item-login" href="login.html">
+        <span class="nav-icon obfx-menu-icon fa fa-user" aria-hidden="true"></span>
         <span class="nav-text">Login</span>
-        <span class="arrow-icon"></span>
       </a>
     </div>
   </div>

@@ -30,12 +30,36 @@
   margin-bottom: 20px;
 }
 
+/* 图片始终在一行显示，按原比例自动缩小，x轴居中，不强制统一高度 */
 .pt-imgs {
   display: flex;
-  gap: 2px;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin: 20px 0px;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
 }
 .pt-imgs img {
-  width: 290px;
+  width: auto;
+  max-height: 320px;
+  object-fit: contain;
+  flex-shrink: 1;
+  align-self: flex-start;
+  max-width: calc((100% - 30px) / 4);
+  border: 2px solid #cfcfcf;
+}
+@media (max-width: 900px) {
+  .pt-imgs img {
+    max-height: 160px;
+    max-width: calc((100% - 30px) / 4);
+  }
+}
+@media (max-width: 600px) {
+  .pt-imgs img {
+    max-height: 100px;
+    max-width: calc((100% - 30px) / 4);
+  }
 }
 
 a {

@@ -8,7 +8,17 @@
   margin-top: 160px;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
+}
+
+.cart-icon {
+  position: absolute;
+  left: calc(50% - 350px - 36px);
+  height: 92px;
+  color: #b2b2b2;
+  z-index: 2;
+  opacity: 0.9;
 }
 
 .cart-banner-icon-symbol {

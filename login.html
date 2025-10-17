@@ -12,7 +12,9 @@
 
   <!-- 背景图片区域 -->
   <div class="links-banner">
-    <span class="login-banner-icon" aria-label="user">👤</span>
+    <svg class="user-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M494.4 558.4c115.2 0 208-92.8 208-208 0-115.2-92.8-208-208-208-113.6 0-208 92.8-208 208C286.4 465.6 379.2 558.4 494.4 558.4zM496 585.6C150.4 580.8 171.2 904 171.2 904L816 904C816 904 820.8 590.4 496 585.6z" fill="currentColor"></path>
+    </svg>
     <h1 class="links-banner-title">My Account</h1>
   </div>
 
@@ -29,7 +31,9 @@
             <label for="password" class="login-label">Password *</label>
             <div class="login-password-wrapper">
               <input type="password" id="password" name="password" class="login-input" required>
-              <button type="button" class="login-toggle-password" onclick="togglePassword()">👁️</button>
+              <button type="button" class="login-toggle-password" onclick="togglePassword()">
+                <span class="dashicons dashicons-visibility" aria-hidden="true"></span>
+              </button>
             </div>
           </div>
           <div class="login-captcha-wrapper">
@@ -60,17 +64,21 @@
 
   <!-- 加载组件的脚本 -->
   <script src="assets/js/components-loader.js"></script>
+  <!-- 导航栏滚动动画 -->
+  <script src="assets/js/navbar-scroll.js"></script>
   <script>
     function togglePassword() {
       const passwordInput = document.getElementById('password');
-      const toggleBtn = document.querySelector('.login-toggle-password');
+      const toggleIcon = document.querySelector('.login-toggle-password .dashicons');
       
       if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        toggleBtn.textContent = '👁️‍🗨️';
+        toggleIcon.classList.remove('dashicons-visibility');
+        toggleIcon.classList.add('dashicons-hidden');
       } else {
         passwordInput.type = 'password';
-        toggleBtn.textContent = '👁️';
+        toggleIcon.classList.remove('dashicons-hidden');
+        toggleIcon.classList.add('dashicons-visibility');
       }
     }
   </script>
