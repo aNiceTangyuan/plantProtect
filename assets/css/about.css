@@ -150,6 +150,12 @@
   margin-bottom: 18px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
 }
+.content-box img {
+  max-width: 70%;
+  height: auto;
+  object-fit: contain; /* 等比缩放不拉伸 */
+  display: block;
+}
 .about-card-desc {
   font-size: 0.98rem;
   color: #3a3a3a;
