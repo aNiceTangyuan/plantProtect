@@ -2,7 +2,56 @@
 @import url('../vendor/dashicons/css/dashicons.css');
 /* 引入 Font Awesome 4.7（本地） */
 @import url('../vendor/fontawesome/css/font-awesome.min.css');
-
+.event-li-ippc,
+.event-li-regional,
+.event-li-other,
+.res-li-edu {
+  position: relative;
+}
+.event-li-ippc .dropdown-menu-sub,
+.event-li-regional .dropdown-menu-sub,
+.event-li-other .dropdown-menu-sub,
+.res-li-edu .dropdown-menu-sub {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 0;
+  background-color: #fff;
+  border-top: 5px solid rgb(204, 204, 204);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1002;
+  padding: 10px 0;
+  min-width: 220px;
+  width: max-content;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.7s ease;
+}
+.event-li-ippc:hover .dropdown-menu-sub,
+.event-li-regional:hover .dropdown-menu-sub,
+.event-li-other:hover .dropdown-menu-sub,
+.res-li-edu:hover .dropdown-menu-sub {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.event-li {
+  position: relative;
+}
+.event-li .event-li-icon,
+.res-li-edu .event-li-icon {
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1003;
+}
+.event-li-icon {
+  font-size: 14px;
+  align-content: center;
+}
 .navbar {
   width: 100%;
   height: 160px;
@@ -165,7 +214,7 @@
   transition: opacity 0.3s ease, transform 0.7s ease;
 }
 
-.nav-item-wrapper:hover .dropdown-menu,
+.nav-item-wrapper:hover > .dropdown-menu,
 .dropdown-menu:hover {
   opacity: 1;
   transform: translateY(0);
@@ -186,7 +235,9 @@
 }
 
 .dropdown-menu li a {
-  display: block;
+  display: flex;              /* 让文字与图标在一行并垂直居中 */
+  align-items: center;
+  gap: 8px;
   padding: 10px 20px;
   color: #333;
   text-decoration: none;
@@ -392,6 +443,26 @@
   box-sizing: border-box;
 }
 
+/* 背景轮播的多图叠层（淡入淡出） */
+.carousel-bg .bg-slides {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0; /* 位于内容与海浪线之下 */
+}
+.carousel-bg .bg-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.carousel-bg .bg-slide.is-active {
+  opacity: 1;
+}
+
 /* 海浪线过渡效果 */
 .carousel-bg::after {
   content: '';
@@ -408,7 +479,7 @@
   background-position: bottom;
   background-repeat: no-repeat;
   pointer-events: none;
-  z-index: 1;
+  z-index: 2; /* 高于背景层，低于卡片内容 */
 }
 
 .card-group {
@@ -422,6 +493,7 @@
   right: 0;
   gap: 24px;
   pointer-events: none;
+  z-index: 3; /* 确保在海浪线之上 */
 }
 
 .card {
