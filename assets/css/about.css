@@ -59,9 +59,9 @@
 }
 
 .content-text {
-  font-size: 0.8rem;
+  font-size: 15px;
   line-height: 1.8;
-  color: #4a4a4a;
+  color: #000000;
   margin: 0 0 20px 0;
   text-align: justify;
 }
@@ -69,8 +69,8 @@
 .content-list {
   margin: 0 0 24px 24px;
   padding: 0 0 0 18px;
-  font-size: 1.08rem;
-  color: #4a4a4a;
+  font-size: 15px;
+  color: #000000;
   line-height: 1;
 }
 .content-list li {
@@ -157,8 +157,8 @@
   display: block;
 }
 .about-card-desc {
-  font-size: 0.98rem;
-  color: #3a3a3a;
+  font-size: 15px;
+  color: #000000;
   text-align: start;
   margin: 0;
   line-height: 1.7;

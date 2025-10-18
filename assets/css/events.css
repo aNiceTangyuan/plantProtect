@@ -1,90 +1,11 @@
-/* 页面横幅 */
+/* Events 页面专属样式 */
+
+/* 页面横幅 - 仅指定背景图 */
 .ev-banner {
-  width: 100%;
-  height: 200px;
-  background: url('../images/ippc-hyderabad-1.jpg') center/cover no-repeat;
-  position: relative;
-  margin-top: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
+  background-image: url('../images/ippc-hyderabad-1.jpg');
 }
 
-.ev-banner-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: #fff;
-  text-align: center;
-  margin: 0;
-  padding: 20px 40px;
-  border-radius: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-/* 页面容器 */
-.ev-container {
-  width: 100%;
-  background-color: rgb(236, 246, 231);
-  min-height: auto; /* 高度由内容决定 */
-  box-sizing: border-box;
-}
-
-.ev-area {
-  max-width: 95%;
-  margin: 0 auto;
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-
-.ev-article {
-  background: #fff;
-  padding: 40px;;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  line-height: 1.8;
-  color: #333;
-}
-
-.ev-article h3 {
-  font-size: 24px;
-}
-
-.ev-article p, strong {
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-
-.ev-img {
-  float: left;
-  width: 300px;
-  height: 200px;
-  margin-right: 20px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  border: 1px solid #f0f0f0;
-  padding: 3px;
-  box-sizing: border-box;
-}
-
-.ev-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.ev-img-caption {
-  font-size: 13px;
-  text-align: center;
-  color: #333;
-  margin: 15px 0 0 0;
-  font-weight: bold;
-}
-
-/* 超链接样式 */
-.ev-article a {
-  color: rgb(0, 175, 242);
-}
-
-.ev-article strong a {
-  text-decoration: none;
+/* 移除遮罩层（events.css 原本没有） */
+.ev-banner::before {
+  display: none;
 }
